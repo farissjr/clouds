@@ -1,0 +1,147 @@
+1. La máquina será actualizada.
+
+ Actualiza la lista de paquetes disponibles en el sistema.
+
+ Actualizar el sistema con el comando "sudo apt upgrade".
+
+ Para instalar Apache, sigue los siguientes pasos: Instala Apache2 ejecutando el siguiente comando: sudo apt install -y apache2 Instalación de MySQL: Proceso para configurar y instalar MySQL en tu sistema.
+
+ Instalar el servidor MySQL con el comando:  sudo apt install -y mysql-server 4.
+
+ Colocando PHP en el sistema: Instalar PHP y el módulo de PHP para Apache en tu sistema usando el comando "sudo apt install -y php libapache2-mod-php".
+
+ Instala los paquetes de PHP necesarios con el siguiente comando: sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl.
+
+ Reiniciar Apache es un proceso simple que consiste en detener y volver a iniciar el servidor para aplicar cambios en la configuración o solucionar problemas.
+
+ Reinicia el servicio de apache2 utilizando el comando sudo systemctl restart apache2.
+
+ Para configurar MySQL: Para acceder a MySQL, simplemente debes abrir el programa y seleccionar la opción de iniciar sesión.
+
+ Abre MySQL con permisos de superusuario.
+
+ Hacer la base de datos.
+
+ Crear una base de datos llamada bbdd.
+
+ Establecer un nuevo usuario: Crear un nuevo usuario llamado 'usuario' con contraseña 'password' en localhost.
+
+ Otorgar privilegios.
+
+ Concede todos los permisos de la base de datos a un usuario llamado 'usuario' en el servidor 'localhost'.
+
+ Salir de MySQL consiste en cerrar la sesión que se ha abierto en la base de datos MySQL. Se puede hacer utilizando el comando "exit" o "quit" en la línea de comandos de MySQL. Una vez que se sale de MySQL, ya no se podrá realizar ninguna acción en la base de datos hasta que se vuelva a iniciar una nueva sesión.
+
+ Por favor, sal de la habitación.
+
+ Comprueba la conexión: Accede a MySQL con el usuario "usuario" y solicita la contraseña.
+
+ Permitir que se puedan realizar conexiones a distancia.
+
+ Editar el archivo mysqld.cnf.
+
+ Edita el archivo mysqld.cnf ubicado en la ruta /etc/mysql/mysql.conf.d/ utilizando el editor de texto Vim con permisos de superusuario.
+
+ Cambia la dirección de enlace: La dirección de enlace es 0.0.0.0.
+
+ Reiniciar MySQL: procedimiento para reiniciar el servicio de MySQL.
+
+ Reiniciar el servicio de MySQL usando el comando: "sudo systemctl restart mysql" Crear un usuario para acceder de forma remota.
+
+ Crear un usuario para acceder desde una dirección IP externa.
+
+ Crear un usuario con el nombre "usuario" y la dirección IP "192.168.22.100", identificado con la contraseña "password".
+
+ 17. Dar beneficios especiales.
+
+ Concede todos los permisos en la base de datos bbdd al usuario 'usuario' con dirección IP 192.168.22.100.
+
+ Cerrar sesión en MySQL.
+
+ Salir.
+
+ Comprobar la conexión a distancia.
+
+ Accede a MySQL utilizando el usuario especificado y pidiendo la contraseña, con la opción de conectarse a un host específico.
+
+ Actualizar las listas de paquetes y instalar las actualizaciones disponibles.
+
+ Actualiza la lista de paquetes en el sistema.
+
+ Actualiza automáticamente el sistema operativo sin solicitar confirmación.
+
+ Preparar los elementos necesarios para la instalación de PPA.
+
+ Instala software-properties-common con el comando sudo apt install -y.
+
+ Agregar el PPA de PHP para instalar.
+
+ Para agregar el repositorio ppa:ondrej/php a nuestro sistema, podemos utilizar el siguiente comando: LC_ALL=C.
+
+UTF-8 sudo add-apt-repository ppa:ondrej/php -y Actualizar los repositorios.
+
+ Actualizar el sistema utilizando el comando "sudo apt update".
+
+ Para instalar PHP 7.4 junto con las extensiones requeridas, sigue estos pasos.
+
+ Instalar PHP 7.4 con el comando: sudo apt install php7.4 -y.
+
+ Instala PHP y el módulo de Apache PHP7.4 con el siguiente comando en la terminal: sudo apt install -y php libapache2-mod-php7.
+
+4 Instalar PHP7.4 y sus extensiones necesarias con el siguiente comando: sudo apt install -y php7.4-fpm php7.4-common php7.4-mbstring php7.4-xmlrpc php7.4-soap php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-ldap php7.4-zip php7.4-curl.
+
+ Elegir la versión de PHP que se utilizará por defecto.
+
+ Actualizar las alternativas de PHP usando el comando sudo update-alternatives --config php.
+
+ 26.
+
+ Encender los módulos requeridos de Apache: Para activar los módulos proxy_fcgi y setenvif, se utiliza el comando sudo a2enmod.
+
+ Activar la configuración de PHP 7.4 FPM.
+
+ Para reiniciar Apache, simplemente debes reiniciar el servicio en el servidor.
+
+ Reinicia el servicio de Apache2 utilizando el comando sudo service apache2 restart.
+
+ Mover el archivo ZIP de la aplicación web a la carpeta /var/www/html.
+
+ Copiar el archivo app-web.zip de la carpeta Baixades a la carpeta html en el directorio /var/www. Utiliza el comando "sudo cp" para realizar esta acción.
+
+ Ir al directorio de Apache.
+
+ Ir al directorio /var/www/html.
+
+ Extraer el contenido del archivo ZIP.
+
+ Descomprimir archivo app-web.zip con el comando sudo unzip.
+
+ 31. Colocar los archivos descomprimidos en la ubicación adecuada.
+
+ Copia la carpeta "app-web" y todo su contenido. /var/www/html es la ruta absoluta donde se encuentran alojados los archivos de un sitio web.
+
+ Borrar la carpeta descomprimida.
+
+ Borrar de forma permanente la carpeta "app-web" y todo su contenido.
+
+ Eliminar el archivo index.html de Apache.
+
+ Borrar de forma permanente el archivo index.html en la carpeta /var/www/html.
+
+ Dar permisos a los archivos.
+
+ Cambiar los permisos recursivamente a 775 para todos los archivos y carpetas en esta ubicación.
+
+ Cambiar el propietario y el grupo de todos los archivos y directorios en el directorio actual al usuario "usuario" y al grupo "www-data".
+
+ Dar la información almacenada en la base de datos.
+
+ Usuario: usuario.
+
+ Clave de acceso: password Una base de datos también conocida como bbdd.
+
+ Localhost es el dominio utilizado para hacer referencia a la propia máquina en la que se está trabajando, usualmente en entornos de desarrollo o pruebas.
+
+ Abrir la página web de la aplicación en el navegador.
+
+  .
