@@ -1,6 +1,6 @@
 1. Actualizar el Sistema
 Primero, tienes que asegurarte de que tu sistema esté bien las últimas actualizaciones.Esto es importante para que todo funcione bien y no haya problemas de seguridad. 
-Abre la terminal y corre estos comandos: 
+Abre la terminal y pon estos comandos: 
 sudo apt update 
 sudo apt upgrade
 
