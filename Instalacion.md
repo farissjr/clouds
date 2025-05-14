@@ -1,185 +1,68 @@
- Actualización de la máquina:
+# Pasos para instalar PHP 7.4 en Ubuntu 24.04 y preparar ownCloud
 
-sudo apt update
-sudo apt upgrade
 
 
-2. Instalación de Apache:
+1.1 **primero bajarse el .zip de ownCloud Server**
 
-sudo apt install -y apache2
+![image](https://github.com/user-attachments/assets/a0e6e5ed-c7cd-4477-a7b5-45f2e3c1032b)
 
 
-3. Instalación de MySQL:
+1.2 **Este paquete permite añadir nuevos repositorios al sistema.
+Como PHP 7.4 ya no está en los repos oficiales de Ubuntu 24.04, necesitamos este comando para poder agregar un repositorio externo donde sí esté.**
 
-sudo apt install -y mysql-server
+![captura1](https://github.com/user-attachments/assets/4cf29df8-d2ae-442a-96c5-956e1f0fc7c6)
 
 
-4. Instalación de PHP:
+1.3 **Este repositorio contiene versiones antiguas y nuevas de PHP. Añadirlo es necesario para poder instalar PHP 7.4, ya que no viene incluido por defecto en Ubuntu 24.04. El LC_ALL=C.UTF-8 evita errores de codificación al ejecutar el comando.**
+![2](https://github.com/user-attachments/assets/c5b28e89-3222-4c6b-9937-1e92d6694931)
 
-sudo apt install -y php libapache2-mod-php
-sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
 
-5. Reinicio de Apache:
+1.4 **Después de añadir el nuevo repositorio, usamos este comando para que Ubuntu lo reconozca y actualice la lista de todos los programas que puede instalar. Así ya podremos instalar PHP 7.4.**
 
-sudo systemctl restart apache2
 
+![3](https://github.com/user-attachments/assets/c51925ad-eb90-4986-9703-b693790bc611)
 
-6. Configuración de MySQL:
-6.1 Acceder a MySQL:
 
-sudo mysql
+1.5 **Con este comando instalamos la versión básica de PHP 7.4. Es necesaria porque ownCloud no es compatible con versiones más recientes como PHP 8.x.**
 
 
-7. Crear la base de datos:
+![4](https://github.com/user-attachments/assets/6ce8cdf9-0ad8-4545-8b50-822971959c15)
 
-CREATE DATABASE bbdd;
 
+1.6 **Aquí instalamos el módulo que permite que Apache (el servidor web que usaremos) pueda ejecutar archivos PHP. Sin esto, Apache no podrá interpretar las páginas PHP correctamente.**
 
-8. Crear el usuario:
 
-CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+![5](https://github.com/user-attachments/assets/9406aee1-b3d1-46ef-b955-16d486da8a87)
 
 
-9. Otorgar privilegios:
 
-GRANT ALL ON bbdd.* TO 'usuario'@'localhost';
+1.7 **Estas extensiones son como herramientas extras que ownCloud necesita para funcionar bien. Por ejemplo: conexión con bases de datos (mysql), compresión de archivos (zip), carga de imágenes (gd), entre otros.**
 
+![6](https://github.com/user-attachments/assets/bc099f47-529b-4f76-a9db-02cd4e8ed25c)
 
-10. Salir de MySQL:
 
-exit
 
+1.8 **Este comando sirve para escoger qué versión de PHP usará el sistema si hay varias instaladas. Aquí seleccionamos la 7.4 para asegurarnos de que todo funcione con ownCloud.**
 
-11. Verificar conexión:
+![7](https://github.com/user-attachments/assets/31875727-0c4f-4fb3-ad0e-a14bdec9fa29)
 
-mysql -u usuario -p
 
 
-12.  Permitir conexiones remotas:
-12.1 Editar mysqld.cnf:
+1.9 **Estos módulos son necesarios para que Apache pueda comunicarse bien con PHP-FPM, que es una forma más rápida y eficiente de ejecutar PHP.**
 
-sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+![8](https://github.com/user-attachments/assets/3f80767d-7b35-4f42-9cf8-d9257ad8f5dc)
 
 
-13. Cambiar bind-address:
 
-bind-address = 0.0.0.0
+2.0 **Este comando carga la configuración especial de PHP 7.4 en Apache para que el servidor sepa cómo manejarlo.**
 
+![9](https://github.com/user-attachments/assets/fcfe68ad-8e7e-407d-9c7d-b652d8b38269)
 
-14. Reiniciar MySQL:
 
-sudo systemctl restart mysql
 
 
-15. Crear un usuario para acceso remoto:
-16. Crear un usuario para una IP remota:
+ # Instalacion de apache2, mysql i algunas librerias al contenido
 
-CREATE USER 'usuario'@'192.168.22.100' IDENTIFIED WITH mysql_native_password BY 'password';
+ 2.1
 
-
-17. Otorgar privilegios:
-
-GRANT ALL ON bbdd.* TO 'usuario'@'192.168.22.100';
-
-
-18. Salir de MySQL:
-
-exit
-
-
-19. Verificar la conexión remota:
-
-mysql -u usuario -p -h <IP_DEL_SERVIDOR_MYSQL>
-
-
-20. Actualizar listas de paquetes e instalar actualizaciones:
-
-sudo apt update
-sudo apt upgrade -y
-
-
-21. Instalar los requisitos previos para PPA:
-
-sudo apt install software-properties-common -y
-
-
-22. Agregar el PPA para PHP:
-
-LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
-
-
-23. Actualizar repositorios:
-
-sudo apt update
-
-
-24. Instalar PHP 7.4 y las extensiones necesarias:
-
-sudo apt install php7.4 -y
-sudo apt install -y php libapache2-mod-php7.4
-sudo apt install -y php7.4-fpm php7.4-common php7.4-mbstring php7.4-xmlrpc php7.4-soap php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-ldap php7.4-zip php7.4-curl
-
-
-25. Seleccionar la versión de PHP predeterminada:
-
-sudo update-alternatives --config php
-
-
-26. Activar los módulos necesarios de Apache:
-
-sudo a2enmod proxy_fcgi setenvif
-sudo a2enconf php7.4-fpm
-
-
-27. Reiniciar Apache:
-
-sudo service apache2 restart
-
-
-28. Copiar el archivo ZIP de la aplicación web a /var/www/html:
-
-sudo cp ~/Baixades/app-web.zip /var/www/html
-
-
-29. Acceder al directorio de Apache:
-
-cd /var/www/html
-
-
-30. Descomprimir el archivo ZIP:
-
-sudo unzip app-web.zip
-
-
-31. Mover los archivos descomprimidos a la ubicación correcta:
-
-sudo cp -R app-web/. /var/www/html
-
-
-32. Eliminar la carpeta descomprimida:
-
-sudo rm -rf app-web/
-
-
-33. Eliminar el archivo index.html de Apache:
-
-sudo rm -rf /var/www/html/index.html
-
-
-34. Establecer permisos en los archivos:
-
-sudo chmod -R 775 .
-sudo chown -R usuario:www-data .
-
-
-35. Proporcionar la información de la base de datos:
-
-Usuario: usuario
-Contraseña: password
-Base de datos: bbdd
-Dominio: localhost
-
-36. Acceder a la instalación de la aplicación web desde el navegador:
-
-http://localhost
