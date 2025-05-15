@@ -61,7 +61,10 @@ Dominio: localhost
 
 9 **Ahora nos llevara al menu principal**
 
-![3](https://github.com/user-attachments/assets/e8882af7-2012-46ca-9833-6e273f007316)
+![3](https://github.com/user-attachments/assets/e8882af7-2012-46ca-9833-6e273f007316) 
+
+
+
 
  
 
