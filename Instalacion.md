@@ -118,38 +118,63 @@ Como PHP 7.4 ya no está en los repos oficiales de Ubuntu 24.04, necesitamos est
 
 
 
- # Configuració de MySQL
 
+2.7 Copiamos el archivo de la aplicación web
+Usamos sudo cp ~/Baixades/app-web.zip /var/www/html para mover el archivo .zip al directorio donde se alojará la web. Sustituye el nombre si el archivo se llama distinto o si tu carpeta de descargas no es Baixades.
 
-2.7 **Entramos en la consola de MySQL**
-**Desde una terminal como root usamos sudo mysql para acceder al gestor de bases de datos.**
-
-![1](https://github.com/user-attachments/assets/e9accb27-8247-4457-b5d4-2365c34b918a)
-
-
-
-2.8 **Creamos la base de datos**
-**Dentro de MySQL ejecutamos CREATE DATABASE bbdd; para crear una nueva base de datos llamada bbdd.**
-
-![2](https://github.com/user-attachments/assets/318bd7dc-a1ba-4dbb-a92b-84fb2849d295)
-
-
-2.9 **Creamos un usuario nuevo**
-**Usamos CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'; para crear un usuario con acceso desde localhost.**
-
-![3](https://github.com/user-attachments/assets/b9257de4-6ac2-4423-9a46-8584414d9f6f)
+![1](https://github.com/user-attachments/assets/46dadd26-bba2-4431-a7b1-6e13e44fb23a)
 
 
 
-3.0 **Damos permisos al usuario**
-**Con GRANT ALL ON bbdd.* TO 'usuario'@'localhost'; damos acceso total del usuario a la base de datos bbdd**
 
-![4](https://github.com/user-attachments/assets/8ecca18c-e7e6-43a0-9632-cff20a308bc9)
+2.8 Entramos en el directorio web
+Con cd /var/www/html accedemos a la carpeta principal donde se guardan los archivos que servirá Apache.
 
 
-3.1 **Salimos de MySQL**
-**Escribimos exit para salir de la consola de MySQL.**
+![2](https://github.com/user-attachments/assets/e84c9075-56d4-4cb0-90c2-d9c054580bc4)
 
-![5](https://github.com/user-attachments/assets/0fe5d473-354c-40c7-8c69-7987c5c3a4c2)
 
+2.9 Descomprimimos el archivo
+Usamos sudo unzip app-web.zip para extraer el contenido del archivo ZIP de la aplicación.
+
+![3](https://github.com/user-attachments/assets/465134aa-b72f-46e6-80d2-6a6e0a68964e)
+
+
+3.0 Copiamos los archivos al directorio raíz de la web
+Con sudo cp -R app-web/. /var/www/html movemos todo el contenido descomprimido directamente al directorio principal.
+
+
+![4](https://github.com/user-attachments/assets/a3970830-8989-4ec3-b664-499e55c957d4)
+
+
+3.1 Eliminamos la carpeta original descomprimida
+Ejecutamos sudo rm -rf app-web/ para borrar la carpeta ya vacía y no dejar archivos duplicados.
+
+![5](https://github.com/user-attachments/assets/914e84d8-ebb1-4fc9-ada8-b3343fa23edd)
+
+
+3.2 Borramos el archivo index.html por defecto
+Apache trae un archivo de inicio por defecto. Lo eliminamos con sudo rm -rf /var/www/html/index.html para que no interfiera.
+![6](https://github.com/user-attachments/assets/5afc9cd0-2f56-4ee9-920a-558ea3f3dc66)
+
+
+3.3 Aplicamos permisos a los archivos de la web
+Con sudo chmod -R 775 . damos permisos adecuados, y con sudo chown -R usuario:www-data . cambiamos el propietario al usuario actual y al grupo de Apache.
+
+![7](https://github.com/user-attachments/assets/e1e5c3d4-a384-4737-8c29-8e36d2772041)
+
+ 
+
+
+3.4Con sudo chmod -R 775 . damos permisos de lectura, escritura y ejecución al propietario y grupo, y lectura y ejecución para otros usuarios.
+
+
+![8](https://github.com/user-attachments/assets/f664100d-f64f-4e84-b522-f3b9b9bf1345)
+
+
+3.5 Cambiamos el propietario de los archivos
+Con sudo chown -R usuario:www-data . asignamos como propietario al usuario actual (usuario) y como grupo a www-data, que es el grupo usado por Apache para acceder a los archivos.
+
+
+![9](https://github.com/user-attachments/assets/be41d622-e5d3-417c-9d74-569be645bba3)
 
