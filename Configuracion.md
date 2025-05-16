@@ -106,4 +106,33 @@ Dominio: localhost
 ![grupos](https://github.com/user-attachments/assets/525460aa-e835-4e59-82a2-f7270d2b2c21) 
 
 
+**Volvemos a la crpeta clickamos en ¨compartidos¨ una vez dentro avamos a la seccion de ¨compartiendo¨ y le damos permisos de edicion o visualizador a los usuarios necesarios**
 
+![image](https://github.com/user-attachments/assets/37a22bed-11a9-4345-b476-c6bee5de6422)
+
+
+
+**Miramos si nos deja poner imagenes y documentos correctamente sin ningun problema**
+
+![image](https://github.com/user-attachments/assets/3aaf91c8-5f45-4391-8f9b-cd411567337b) 
+
+
+**Con los permisos que hemos dado anteriormente a los usuarios para eliminar editar y visualizar comprobamos si deja eliminar y editar**
+
+![image](https://github.com/user-attachments/assets/59934a94-e9b4-4aea-a7c8-b9ae66bb9855)
+
+
+![image](https://github.com/user-attachments/assets/c5cb847d-07c1-41df-8e78-ab80ef7489d5) 
+
+
+
+**ahora Configuramos políticas de seguridad (caducidad de enlaces) y le ponemos contrasña (opcional)**
+
+![image](https://github.com/user-attachments/assets/aa50f911-40e9-436d-861b-eae954acffcc)
+
+
+**Al acabar se nos creara automaticamente el enlace con contraseña para poder compartirlo entre usuarios y otras personas**
+
+![image](https://github.com/user-attachments/assets/5048590d-507a-4a25-8cc4-e7f277af7e6c)
+
+ 
