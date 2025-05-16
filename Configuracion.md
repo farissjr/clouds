@@ -64,6 +64,7 @@ Dominio: localhost
 ![3](https://github.com/user-attachments/assets/e8882af7-2012-46ca-9833-6e273f007316) 
 
 
+
 # Demostracion de funcionamiento
 
 
@@ -73,10 +74,13 @@ Dominio: localhost
 
 
 
+
+
 **Haz clic en un archivo o carpeta “Compartir” genera un enlace o asigna un usuario.**
 
  
 ![image](https://github.com/user-attachments/assets/4fd90b81-2508-489f-9534-1aa0e444d846)
+
 
 
 
@@ -88,10 +92,13 @@ Dominio: localhost
 ![ediotr y admin](https://github.com/user-attachments/assets/e73501d8-6933-4d8c-9fb5-91425680ca1a) 
 
 
+
 **Para crear los usuarios tienes que clickar en la parte de ¨nombre de usuario¨ y en la de ¨correo electronico¨ una vez acabado le damos a CREAR**
 
 
 ![image](https://github.com/user-attachments/assets/38998ed0-8fe0-4a07-a4ef-fe421065ee4f)
+
+
 
 
 **Ahora en la parte de ¨usuarios¨ a la esquina de la izuqierda saldra ¨agregar grupo¨ añadimos y asignamos cada grupo (administrador,editor,visualizador)**
