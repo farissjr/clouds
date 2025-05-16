@@ -64,7 +64,30 @@ Dominio: localhost
 ![3](https://github.com/user-attachments/assets/e8882af7-2012-46ca-9833-6e273f007316) 
 
 
+# Demostracion de funcionamiento
 
+
+**Usa la opción de crear carpeta nueva y ponle un nombre.**
+
+![image](https://github.com/user-attachments/assets/46910531-21fc-4fd3-b53a-b489ee6d0d3b)
+
+
+
+**Haz clic en un archivo o carpeta “Compartir” genera un enlace o asigna un usuario.**
 
  
+![image](https://github.com/user-attachments/assets/4fd90b81-2508-489f-9534-1aa0e444d846)
+
+
+**antes de hacer el anterior paso Ve al panel de administración “Usuarios” añade tres usuarios con roles distintos (administrador, editor, visualizador).**
+
+![usuaris](https://github.com/user-attachments/assets/5b5c1a8b-a916-492a-a0de-280c947aa5db)
+
+
+![ediotr y admin](https://github.com/user-attachments/assets/e73501d8-6933-4d8c-9fb5-91425680ca1a) 
+
+
+**Ahora en la parte de ¨usuarios¨ a la esquina de la izuqierda saldra ¨agregar grupo¨ añadimos y asignamos cada grupo (administrador,editor,visualizador)**
+
+![grupos](https://github.com/user-attachments/assets/525460aa-e835-4e59-82a2-f7270d2b2c21)
 
