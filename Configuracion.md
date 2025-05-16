@@ -79,6 +79,7 @@ Dominio: localhost
 ![image](https://github.com/user-attachments/assets/4fd90b81-2508-489f-9534-1aa0e444d846)
 
 
+
 **antes de hacer el anterior paso Ve al panel de administración “Usuarios” añade tres usuarios con roles distintos (administrador, editor, visualizador).**
 
 ![usuaris](https://github.com/user-attachments/assets/5b5c1a8b-a916-492a-a0de-280c947aa5db)
@@ -87,7 +88,15 @@ Dominio: localhost
 ![ediotr y admin](https://github.com/user-attachments/assets/e73501d8-6933-4d8c-9fb5-91425680ca1a) 
 
 
+**Para crear los usuarios tienes que clickar en la parte de ¨nombre de usuario¨ y en la de ¨correo electronico¨ una vez acabado le damos a CREAR**
+
+
+![image](https://github.com/user-attachments/assets/38998ed0-8fe0-4a07-a4ef-fe421065ee4f)
+
+
 **Ahora en la parte de ¨usuarios¨ a la esquina de la izuqierda saldra ¨agregar grupo¨ añadimos y asignamos cada grupo (administrador,editor,visualizador)**
 
-![grupos](https://github.com/user-attachments/assets/525460aa-e835-4e59-82a2-f7270d2b2c21)
+![grupos](https://github.com/user-attachments/assets/525460aa-e835-4e59-82a2-f7270d2b2c21) 
+
+
 
